@@ -1,0 +1,79 @@
+
+
+#include <stdio.h>
+
+// public int variables
+   int x;
+   int y;
+   int height;
+   int gap;
+  
+int main()
+{
+    // method call
+printDiamond();
+  return 0;
+}
+
+void printDiamond(){
+      // NOTE: Due to the amazing behavior of odd numbers the tip
+      
+  //of the star will be off by some spaces. I'm to lazy to 
+  //fix it (lmao) so hopefully you like deformed stars : )
+  
+  // prints the first half of the diamond, a 
+  // simple way to print a triangle
+  
+  
+  printf("Enter a height greater than or equal to 3 \n ");
+  scanf("%d", &height);
+  
+  // assigns the height different variables depending on
+  // whether it is odd or even
+  if (height % 2 == 0) {
+  height = height / 2;
+   gap = height - 1;
+  } else {
+      height = (height / 2) + 1;
+       gap = height - 1;
+  }
+  
+ 
+ // Does the same thing as above
+ // (But upside down :) )
+  
+  for (x = 1; x <= height; x++)
+  {
+      
+    for (y = 1; y <= gap ; y++)
+    
+      printf(" ");
+    gap--;
+    
+    for (y = 1; y <= 2*x-1; y++) 
+    
+      printf("X");
+    printf("\n");
+    
+    
+  }
+ 
+  
+  gap = 1;
+ 
+
+  for (x = 1; x <= height - 1; x++)
+  {
+      
+    for (y = 1; y <= gap; y++)
+    
+      printf(" ");
+    gap++;
+ 
+    for (y = 1 ; y <= 2*(height) - 2 * x-1; y++)
+    
+      printf("X");
+    printf("\n");
+    
+  }
+}

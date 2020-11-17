@@ -55,7 +55,7 @@ void printDiamond(){
       printf("X");
     printf("\n");
     
-    
+    //(Nisu) I like how you were able to figure out the spacing
   }
  
   
